@@ -82,6 +82,53 @@ fn main() {
         println!("End count = {count}");
     }
 
+    //Conditional loops with while
+    {
+        let mut number = 3;
+
+        while number != 0 {
+            println!("{number}!");
+
+            number -= 1;
+        }
+
+        println!("LIFTOFF!!!");
+    }
+// Looping through arrays
+    {
+        let a = [10, 20, 30, 40, 50];
+        let mut index = 0;
+
+        while index < 5 {
+            println!("the value iss: {}", a[index]);
+
+            index += 1;
+        }
+    }
+
+    {
+        let a = [10, 20, 30, 40, 50];
+
+        for element in a {
+            println!("the value is: {element}");
+        }
+    }
+
+    {
+        let mut x = 0;
+        'a: loop {
+            x += 1;
+            'b: loop {
+                if x > 10 {
+                    continue 'a;
+                } else {
+                    break 'b;
+                }
+            }
+            break;
+        }
+    }
+
 
 }
 
