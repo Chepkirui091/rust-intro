@@ -60,4 +60,41 @@ fn main() {
         (first, last) = greet(first,last);
         println!("Hello {first} {last}")
     }
+
+    // variables live in the stack
+    {
+        let n = 5;
+        let y = plus_two(n);
+        println!("The value of y is: {y}");
+    }
+
+    fn plus_two(x: i32) -> i32 {
+        x + 1
+    }
+
+    //Boxes live in the heap
+    // However copying data take up a lot of memory e.g program that copies an array with 1 million elements:
+    {
+        let a = [1_000_000];
+        let b = a;
+        println!("{b}")
+    }
+
+    //pointer
+    // {
+    //     let b = Box::new([0; 100]);
+    //     free(b);
+    //     assert!(b[0] == 0);
+    // }
+    //
+    //
+    // {
+    //     let a_num = 4;
+    //     make_and_drop();
+    // }
+    // fn make_and_drop() {
+    //     let a_box = Box::new(5);
+    // }
+
+
 }
