@@ -1,3 +1,8 @@
+//----------- Ownership rules -----
+// 1. Each value in Rust has a variable that's called its owner
+// 2. There can only be one owner at a time.
+// 3. When the owner goes out of scope, the value will be dropped.
+
 fn read(y: bool) {
     if y {
         println!("y is true!");
@@ -17,7 +22,7 @@ fn main() {
         x + 1
     }
     {
-        let n: &String;
+        let n;
         {
             let name = String::from("Caleb");
             n = &name;
@@ -77,7 +82,7 @@ fn main() {
     {
         let a = [1_000_000];
         let b = a;
-        println!("{b}")
+        println!("{:?}",b)
     }
 
     //pointer
@@ -95,6 +100,14 @@ fn main() {
     // fn make_and_drop() {
     //     let a_box = Box::new(5);
     // }
+    {
+        let x: &str = "hello";
+        let y = 22;
+        b(x);
+    }
 
-
+    fn b(x: &str) {
+        println!("{x}");
+    }
 }
+
