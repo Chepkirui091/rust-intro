@@ -10,6 +10,13 @@ fn read(y: bool) {
 }
 
 fn main() {
+    { // s is not valid here, it's not yet declared
+        let s = String:: from("hello"); // s is valid from this point onwards
+        //do stuff with s
+    } // this scope is now over, and s is no longer valid
+
+
+
     let x = true;
     read(x);
     {
@@ -51,7 +58,7 @@ fn main() {
         let name1 = &mut name; //you must use mut and can't reference more than once
         *name1 = String::from("Daph");
 
-        println!("{name1}"); // will run but you can't do it in vice versa
+        println!("{name1}"); // will run, but you can't do it in vice versa
         println!("{name}");
     }
 
@@ -110,4 +117,6 @@ fn main() {
         println!("{x}");
     }
 }
+
+
 

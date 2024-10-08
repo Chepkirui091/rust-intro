@@ -5,9 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/branches/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/practice/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ownership/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ownership-youtube/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/branches/target" />
       <excludeFolder url="file://$MODULE_DIR$/practice/target" />
       <excludeFolder url="file://$MODULE_DIR$/ownership/target" />
+      <excludeFolder url="file://$MODULE_DIR$/ownership-youtube/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
